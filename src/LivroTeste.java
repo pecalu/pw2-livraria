@@ -7,11 +7,11 @@ public class LivroTeste {
         meuLivro.paginas = 521;
         meuLivro.resumo = "bla bla bla bla bla";
         meuLivro.autor = "J. R. Tolkien";
+        // meuLivro.editora = "saraiva";
 
-        Editora editora = new Editora();
-        editora.nome = "Editora Saraiva";
-        editora.email = "saraiva@gmail.com.br";
-        meuLivro.editora = editora;
+        Editora editora1 = new Editora();
+        editora1.email = "saraiva@gmail.com.br";
+        meuLivro.editora = editora1;
 
         meuLivro.aplicarDesconto(0.1);
 
@@ -22,7 +22,10 @@ public class LivroTeste {
         livroFavorito.resumo = "bla bla bla bla bla";
         livroFavorito.paginas = 500;
         livroFavorito.autor = "Dan Brown";
-        livroFavorito.editora = editora;
+        Editora editora2 = new Editora("editora saraiva");
+        editora1.nome = "editora saraiva";
+        editora1.email = "saraiva@gmail.com.br";
+        livroFavorito.editora = editora2;
 
         livroFavorito.aplicarDesconto(0.25);
 
