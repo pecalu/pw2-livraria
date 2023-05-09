@@ -1,0 +1,10 @@
+herança so faz sentido se herda de uma outra classe com as mesmas caracteristicas
+ex
+
+livro ---> livro digital
+  (os 2 sao livros)
+    ai faz sentido
+
+super class = classe mae 'Livro'
+
+sub class = classe que herda da classe mae 'livro digital'

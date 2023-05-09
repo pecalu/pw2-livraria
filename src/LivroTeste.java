@@ -22,6 +22,7 @@ public class LivroTeste {
         livroFavorito.setResumo("bla bla bla bla bla");
         livroFavorito.setPaginas(500);
         livroFavorito.setAutor("Dan Brown");
+        livroFavorito.setMarcaDAgua("teste@teste");
 
         Editora editora2 = new Editora("editora saraiva");
         editora1.nome = "editora saraiva";
