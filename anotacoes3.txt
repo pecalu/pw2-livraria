@@ -1,0 +1,11 @@
+quebrar o encapsulamento quando quiser usar um atributo privado sem usar get,set, 
+nas suas subclasses da classe mae.
+		
+			' protectd tipo_atributo nome_atributo '
+		
+		na uml usado o # antes para saber se é protegido
+
+abstratato = construir outras classes usando ele apenas de molde.
+
+quando for usar uma classe 'molde', nessa classe depois do "public" colocar abstract
+			'public abstract class nome_classeMolde'

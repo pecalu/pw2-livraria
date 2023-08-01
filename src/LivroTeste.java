@@ -2,7 +2,8 @@ public class LivroTeste {
 
     public static void main(String[] args) {
 
-        Livro meuLivro = new Livro("O hobbit",9.99);
+        RegistroVendas venda = new RegistroVendas();
+        LivroFisico meuLivro = new LivroFisico("O hobbit",9.99);
         meuLivro.setNome("O Hobbit");
         meuLivro.setPaginas(521);
         meuLivro.setResumo("bla bla bla bla bla");
@@ -13,9 +14,10 @@ public class LivroTeste {
         editora1.email = "saraiva@gmail.com.br";
         meuLivro.setEditora(editora1);
 
-        meuLivro.aplicarDesconto(0.5);
+        //meuLivro.aplicarDesconto(0.5);
 
         meuLivro.exibirDados();
+        venda.adicionar(meuLivro);
 
         LivroDigital livroFavorito = new LivroDigital("O código da vinci",9.99);
         livroFavorito.setNome("O Código Da Vinci");
@@ -30,9 +32,10 @@ public class LivroTeste {
         livroFavorito.setEditora(editora2);
         livroFavorito.setTipoCapa(TipoCapaEnum.PERSONALIZADA);
 
-        livroFavorito.aplicarDesconto(0.25);
+        //livroFavorito.aplicarDesconto(0.25);
 
         livroFavorito.exibirDados();
+        venda.adicionar(livroFavorito);
 
     }
 
