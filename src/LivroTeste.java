@@ -37,6 +37,9 @@ public class LivroTeste {
         livroFavorito.exibirDados();
         venda.adicionar(livroFavorito);
 
+        Vouchers cupons = new Vouchers();
+        cupons.validar("etec8");
+        cupons.exibir();
     }
 
 }

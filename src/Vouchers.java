@@ -1,8 +1,8 @@
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class Vouchers {
-    List<String> itens = new ArrayList<>();
+    Set<String> itens = new HashSet<>(); //set nao permite elementos duplicados e ordena em ordem para busca
+                                        // list deixa em ordem que foi gerada 'desorganizada' e perimite iten duplicados
 
     public Vouchers(){
         itens.add("Etec-Teste");
@@ -14,11 +14,15 @@ public class Vouchers {
     }
 
     void validar(String item){
-        if(itens.contains(item)){
-            System.out.println("Cupom Valido");
-        } else{
-            System.out.println("Cupom Invalido");
+        var result = itens.stream().filter(e -> item.equalsIgnoreCase(e)).findAny();//estrutura que permite manipular listas && conversao de objetos
+        if (result.isPresent()){
+            System.out.println("Cupom valido");
+        } else {
+            System.out.println("cupom invalido");
         }
     }
 
+    void exibir(){
+        itens.forEach(e -> System.out.println(e));
+    }
 }
